@@ -1,19 +1,22 @@
 package com.mikdantech.controller;
 
+import java.util.Calendar;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
 	
-	@GetMapping("/")
-	public ModelAndView index() {
-
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("title", "Spring Boot App");
-		modelAndView.setViewName("application");
-
-		return modelAndView;
+	@RequestMapping("/")
+	public String index() {
+		return "application.jsp";
+	}
+	
+	@RequestMapping("/data")
+	@ResponseBody
+	public String data() {
+		return Calendar.getInstance().getTime().toString();
 	}
 }
