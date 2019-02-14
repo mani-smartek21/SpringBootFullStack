@@ -11,9 +11,20 @@ public class MainController {
 	public ModelAndView index() {
 
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("title", "Spring Boot App");
+		modelAndView.addObject("title", "Project Proposal");
 		modelAndView.setViewName("application");
 
 		return modelAndView;
 	}
+	
+	@GetMapping("/admin")
+	public ModelAndView admin() {
+
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("admin");
+
+		return modelAndView;
+	}
+	
+	
 }
