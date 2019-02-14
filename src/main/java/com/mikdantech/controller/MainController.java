@@ -19,8 +19,10 @@ public class MainController {
 	@GetMapping("/")
 	public ModelAndView index() {
 
+		List<Project> allProjects = repo.findAll();
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("title", "Project Proposal");
+		modelAndView.addObject("allProjects", allProjects);
 		modelAndView.setViewName("application");
 
 		return modelAndView;
