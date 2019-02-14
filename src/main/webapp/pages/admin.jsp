@@ -43,7 +43,7 @@
     <div class="col-sm-3 sidenav">
       <h4>Admin Panel</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Projects</a></li>
+        <li class="active"><a href="/admin">Projects</a></li>
       </ul><br>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Projects..">
@@ -64,27 +64,59 @@
       <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <br><br>
       <hr>
-      <form class="form-horizontal" action="/action_page.php">
+      <form class="form-horizontal" action="/admin" method="post">
       <h2>Add a Project</h2>
+			  
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="email">Email:</label>
+			    <label class="control-label col-sm-2" for="title">title:</label>
 			    <div class="col-md-5">
-			      <input type="email" class="form-control" id="email" placeholder="Enter email">
+			      <input type="text" class="form-control" id="title" name="title">
 			    </div>
 			  </div>
+			  
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="pwd">Password:</label>
-			    <div class="col-md-5"> 
-			      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+			    <label class="control-label col-sm-2" for="description">description:</label>
+			    <div class="col-md-5">
+			      <input type="text" class="form-control" id="description" name="description">
 			    </div>
 			  </div>
-			  <div class="form-group"> 
-			    <div class="col-sm-offset-2 col-md-5">
-			      <div class="checkbox">
-			        <label><input type="checkbox"> Remember me</label>
-			      </div>
+			  
+			  <div class="form-group">
+			    <label class="control-label col-sm-2" for="image">image:</label>
+			    <div class="col-md-5">
+			      <input type="text" class="form-control" id="image" name="image">
 			    </div>
 			  </div>
+			  
+			  <div class="form-group">
+			    <label class="control-label col-sm-2" for="content">content:</label>
+			    <div class="col-md-5">
+			      <input type="text" class="form-control" id="content" name="content">
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label class="control-label col-sm-2" for="date">date:</label>
+			    <div class="col-md-5">
+			      <input type="text" class="form-control" id="date" name="date">
+			    </div>
+			  </div>
+			  
+			   <div class="form-group">
+			    <label class="control-label col-sm-2" for="client">client:</label>
+			    <div class="col-md-5">
+			      <input type="text" class="form-control" id="client" name="client">
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label class="control-label col-sm-2" for="category">category:</label>
+			    <div class="col-md-5">
+			      <input type="text" class="form-control" id="category" name="category">
+			    </div>
+			  </div>
+			  
+			  
 			  <div class="form-group"> 
 			    <div class="col-sm-offset-2 col-md-5">
 			      <button type="submit" class="btn btn-success">Submit</button>

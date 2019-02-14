@@ -10,30 +10,24 @@ public class Project {
 	@Id
 	@GeneratedValue
 	private int id;
-	private String name;
+	private String title;
 	private String description;
 	private String image;
 	private String content;
 	private String date;
 	private String client;
 	private String category;
-	
-	@Override
-	public String toString() {
-		return "Project [id=" + id + ", name=" + name + ", description=" + description + ", image=" + image
-				+ ", content=" + content + ", date=" + date + ", client=" + client + ", category=" + category + "]";
-	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getDescription() {
 		return description;
@@ -70,6 +64,11 @@ public class Project {
 	}
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	@Override
+	public String toString() {
+		return "Project [id=" + id + ", title=" + title + ", description=" + description + ", image=" + image
+				+ ", content=" + content + ", date=" + date + ", client=" + client + ", category=" + category + "]";
 	}
 	
 }
