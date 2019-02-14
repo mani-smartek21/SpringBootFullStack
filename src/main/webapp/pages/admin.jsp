@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+	<%@ page isELIgnored="false" %>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,6 +102,11 @@ footer {
 			</div>
 
 			<div class="col-sm-9">
+			
+			<c:forEach var="project" items="${allProjects}">
+				<li>${project.title}</li>
+			</c:forEach>
+			
 				<h4>
 					<small>Recent Projects</small>
 				</h4>
