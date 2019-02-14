@@ -14,6 +14,16 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-134415110-1', 'auto');
+ga('send', 'pageview');
+</script>
 
 <script>
 	$(document).ready(function() {
@@ -103,35 +113,26 @@ footer {
 
 			<div class="col-sm-9">
 			
+			<h4>
+				<small>Recent Projects</small>
+			</h4>
 			<c:forEach var="project" items="${allProjects}">
-				<li>${project.title}</li>
+				<hr>
+				<h2>${project.title }</h2>
+				<h5>
+					<span class="glyphicon glyphicon-time"></span> Post by Mani,
+					${project.date }.
+				</h5>
+				<h5>
+					<span class="label label-danger">${project.client }</span> <span
+						class="label label-primary">${project.category }</span>
+				</h5>
+				<br>
+				<p>${project.content }</p>
+				<br>
 			</c:forEach>
 			
-				<h4>
-					<small>Recent Projects</small>
-				</h4>
-				<hr>
-				<h2>Sample Title</h2>
-				<h5>
-					<span class="glyphicon glyphicon-time"></span> Post by Jane Dane,
-					Sep 27, 2015.
-				</h5>
-				<h5>
-					<span class="label label-danger">Food</span> <span
-						class="label label-primary">Ipsum</span>
-				</h5>
-				<br>
-				<p>Food is my passion. Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-					exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum consectetur
-					adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-					exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat.</p>
-				<br>
+				
 				<br>
 				<hr>
 				<div>
