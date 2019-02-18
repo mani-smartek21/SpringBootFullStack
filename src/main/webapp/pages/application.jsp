@@ -13,14 +13,6 @@
   <meta name="author" content="">
 
   <title>${title }</title>
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134415110-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-134415110-1');
-</script>
 
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -30,14 +22,14 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-134415110-1', 'auto');
 ga('send', 'pageview');
-</script>
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-134415110-1', 'auto');
-ga('send', 'pageview');
+ga('send', {
+    hitType: 'event',
+    eventCategory: 'category name',
+    eventAction: 'post click',
+    eventLabel: 'tracking label'
+});
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
